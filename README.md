@@ -21,7 +21,8 @@ Em investigações de crimes digitais ou fraudes corporativas, a trilha de audit
 3. Instale as dependências: `npm install`.
 4. Rode o servidor: `node src/server.js`.
 
-### Endpoints:
-- **POST `/logs`**: Registra uma nova ação.
-- **GET `/logs`**: Lista todos os registros.
-- **GET `/logs?user=Nome`**: Filtra logs por um perito ou usuário específico.
+| Método | Rota | Descrição | Acesso |
+| :--- | :--- | :--- | :---: |
+| **POST** | `/logs` | Registra um novo evento de auditoria | 🔐 Privado |
+| **GET** | `/logs` | Lista logs com filtros (data, usuário, tipo) | 🔐 Privado |
+| **GET** | `/logs/:id` | Detalhes técnicos de um registro específico | 🔐 Privado |
